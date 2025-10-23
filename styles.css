@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+header .banner {
+    background: linear-gradient(90deg, #ff5252 60%, #ffa726 100%);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.books {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.books h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.book {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 1em;
+    text-align: center;
+    width: 160px;
+}
+
+.book img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.book p {
+    margin: 0.5em 0 0.2em 0;
+    font-weight: 500;
+}
+
+.book span {
+    display: block;
+    color: #ff5252;
+    margin-bottom: 0.5em;
+}
+
+.book button {
+    background: #ffa726;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.book button:hover {
+    background: #ff5252;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .book-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header .banner {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    .books {
+        margin: 1em 0.2em;
+        padding: 0.5em;
+    }
+    .book-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+    .book {
+        width: 85vw;
+    }
+}
